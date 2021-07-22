@@ -6,7 +6,9 @@ inputElement.addEventListener("keyup", (event) => {
     const value = event.target.value;
     resultElement.innerHTML = "";
 
-    fetch(`https://itunes.apple.com/search?term=${value}&entity=song`)
+    const endpoint = `https://itunes.apple.com/search?term=${value}&entity=song`;
+
+    fetch(endpoint)
 
         .then((response) => {
             if (response.ok) {
