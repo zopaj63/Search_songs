@@ -18,3 +18,9 @@ Možete koristiti bilo koje npm pakete za koje smatrate da vam mogu pomoći.
 Kod može biti ES5 ili ES6 standard.
 Stilizacija aplikacije nije od važnosti.
 Dodatni bodovi za exportanje krajnjeg js filea minificiranog za produkciju.
+
+Ako imate problem s CORS-om zbog toga što ste poslali previše zahtjeva u kratkom vremenskom roku, predlažem sljedeće:
+1. Posjetite endpoint iz teksta parcijalnog ispita u pregledniku i preuzmite .json datoteku koju vam nudi
+2. Spremite datoteku pored JS datoteke vaše aplikacije
+3. Koristitie fetch da bi dohvatili lokalnu datoteku (npr. fetch("./response.json"))
+4. Pripremite aplikaciju s obzirom na podatke iz lokalnog response.json i kasnije se prespojite na pravi endpoint kada počnete dodavati obrazac i pretraživanje kroz input element
